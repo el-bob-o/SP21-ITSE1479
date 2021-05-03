@@ -114,60 +114,6 @@ def showMenu():
 # FunctionName:  lastnameFunction(your parameters)
 # *****************************************************************************************
 
-# *****************************************************************************************
-# FUNCTION:         stub (default for menu)
-# DESCRIPTION:      stub function created to print a single message: Not Implemented Yet
-# OUTPUT EXAMPLE:   User enters any jumpTable entry that has not been created yet
-# *****************************************************************************************
-def stub():
-    print()
-    print()
-
-    print("Not implemented at this time.  Check back later.")
-    print("Press ENTER to continue.")
-    input()    
-
-# *****************************************************************************************
-# FUNCTION:         smileyFunction
-# DESCRIPTION:      calls SmileyFib with a parameter of 11
-#                   prints the Fibonacci series as defined by the input value
-# OUTPUT EXAMPLE:   User enters 11
-#                   Program outputs the following:
-#                      Fibonacci Sequence (9 iterations): 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
-# *****************************************************************************************
-def smileyFunction():
-    smileyFib(11)
-    print("Press ENTER to continue.")
-    input()    
-
-def smileyFib(numberOfTimes):
-    current = 0
-    nextOne = 1
-    nextTerm = 0
-
-    print()
-    print()
-    print("Fibonacci Sequence (", str(numberOfTimes)," iterations)")
-
-    for i in range(0, numberOfTimes):
-        if (i == 1):                    # Prints the first term
-            print(str(current), end= '')
-
-        elif (i == 2):                 # Prints the second term
-            print(str(nextOne), end = '')
-        else:                          # Prints all subsequent terms
-            nextTerm = current + nextOne;
-            current = nextOne;
-            nextOne = nextTerm;
-
-            print(str(nextTerm), end = '')
-
-        if (i + 1) < numberOfTimes:
-            print(", ", end = '')
-
-    print()
-    print()
-    
 def woolardFunction():
     woolardGame()
     print("""               _________________________
@@ -243,6 +189,63 @@ def woolardGame():
             print(name, "has died because once you make a choice you stick to it, nobody changes your mind.")
         else:
             print("That input was not recognized, please enter yes, no or x to exit.")
+
+
+# *****************************************************************************************
+# FUNCTION:         stub (default for menu)
+# DESCRIPTION:      stub function created to print a single message: Not Implemented Yet
+# OUTPUT EXAMPLE:   User enters any jumpTable entry that has not been created yet
+# *****************************************************************************************
+def stub():
+    print()
+    print()
+
+    print("Not implemented at this time.  Check back later.")
+    print("Press ENTER to continue.")
+    input()    
+
+# *****************************************************************************************
+# FUNCTION:         smileyFunction
+# DESCRIPTION:      calls SmileyFib with a parameter of 11
+#                   prints the Fibonacci series as defined by the input value
+# OUTPUT EXAMPLE:   User enters 11
+#                   Program outputs the following:
+#                      Fibonacci Sequence (9 iterations): 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+# *****************************************************************************************
+def smileyFunction():
+    smileyFib(11)
+    print("Press ENTER to continue.")
+    input()    
+
+def smileyFib(numberOfTimes):
+    current = 0
+    nextOne = 1
+    nextTerm = 0
+
+    print()
+    print()
+    print("Fibonacci Sequence (", str(numberOfTimes)," iterations)")
+
+    for i in range(0, numberOfTimes):
+        if (i == 1):                    # Prints the first term
+            print(str(current), end= '')
+
+        elif (i == 2):                 # Prints the second term
+            print(str(nextOne), end = '')
+        else:                          # Prints all subsequent terms
+            nextTerm = current + nextOne;
+            current = nextOne;
+            nextOne = nextTerm;
+
+            print(str(nextTerm), end = '')
+
+        if (i + 1) < numberOfTimes:
+            print(", ", end = '')
+
+    print()
+    print()
+    
+
 
 #*****************************************************************
 # Please leave me alone,
