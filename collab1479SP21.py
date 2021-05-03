@@ -44,7 +44,7 @@ def main():
     jumpTable['17'] = stub                # Stout - call to function goes here
     jumpTable['18'] = stub                # Syed - call to function goes here
     jumpTable['19'] = stub                # Watts - call to function goes here
-    jumpTable['20'] = stub                # Woolard - call to function goes here
+    jumpTable['20'] = woolardFunction                # Woolard - call to function goes here
 
     chrChoice = ""      # To hold a menu choice
 
@@ -167,6 +167,82 @@ def smileyFib(numberOfTimes):
 
     print()
     print()
+    
+def woolardFunction():
+    woolardGame()
+    print("""               _________________________
+              |\ _____________________ /|
+              | |_____________________| |
+              |/_______________________\|
+              /=========================\\
+             '==========================='
+              |  ~~                  ~~ |
+              |         R.I.P.          |
+              |_________________________|""")
+            
+    print("Press ENTER to continue.")
+    input()
+    
+    
+def woolardGame():
+    selection = ["yes", "no", "x"]
+    direction = ["forward", "backward", "left", "right"]
+    
+    print("*" * 80)
+    print("Welcome to R. I. P.   A choose your own adventure game. Good luck!")
+    print("*" * 80)
+    
+    #The game begins
+    name = input("Please enter your character name: ")
+    print("Welcome", name)
+    print("-" * 80)
+    print(name, "has once again woke up in a dark room with no clue how they "
+          "got there or memory of the night before.\n")
+    print("Would you like to look around the room?")
+    
+    choice = ""
+    while choice not in selection:
+        choice = input("Please type in yes or no, or simply enter x to exit the game: ")
+        print("-" * 80)
+        if choice == "yes":
+            print("You look around the room and realize it is indeed dark.")
+            print(name, "is doing great so far, everything will work out fine.")
+        elif choice == "no":
+            print("Your lack of inquisitiveness has rewarded you with... well nothing.")
+        elif choice == "x":
+            print("You have chose to sit and do nothing, playing this game is way too hard.")
+            print(name, "has died of thirst and general apathy.")
+            return
+        else:
+            print("That input was not recognized, please enter yes, no or x to exit.")
+            
+    print("-" * 80)
+    print("You are still in the dark and confused but you get the sense you can leave the room "
+          "by heading in any direction.")
+    choice = ""
+    while choice not in direction:
+        choice = input("Please choose a direction to go, type in left, right, forward or backward or x to exit: ")
+        print("-" * 80)
+        if choice == "forward":
+            print("You start to walk forward, it quickly becomes apparent that you are facing the edge of a cliff!")
+            print("Before you can stop yourself you stumble over the edge and vanish into the abyss.")
+            print(name, "has fallen to their death.")
+        elif choice == "backward":
+            print("You don't bother turning around and start walking backwards.")
+            print("After taking several steps backwards you sense a presence behind you.")
+            print("Thanks to your finely honed reflexes you turn around quickly to see what lurks behind you!")
+            print("Due to your lack of night vision and the fact that it's dark you don't see anything.")
+            print(name, "was mauled to death by a... shark or a bear or something.")
+        elif choice == "left":
+            print("You turn and start walking to your left, at least you think it's your left. Directions are hard.")
+            print(name, "has died in a mostly leftward direction.")
+        elif choice == "right":
+            print("You confidently turn to your right and start to walk.")
+            print("After walking with a determined step for a several minutes you smack into a wall.")
+            print(name, "is adamant about that determined stride and continues to walk into the wall.")
+            print(name, "has died because once you make a choice you stick to it, nobody changes your mind.")
+        else:
+            print("That input was not recognized, please enter yes, no or x to exit.")
 
 #*****************************************************************
 # Please leave me alone,
